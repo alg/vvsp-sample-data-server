@@ -57,7 +57,15 @@ class Database
     [ "600000048", "albemarle county", "singh-05/03/1955-0048-albemarle county",      nil ],
     [ "600000049", "hampton city", "ohnishi-01/05/1984-0049-hampton city",            nil ]
 
-  class LookupError < StandardError; end
+  class LookupError < StandardError
+    attr_reader :xml
+
+    def initialize(message, xml)
+      super message
+      @xml = xml
+    end
+
+  end
 
   # looks up XML using whatever data we have.
   # raises an LookupError when confidential or inactive.
@@ -97,7 +105,7 @@ class Database
 
   # loads data or raises an error
   def self.load_or_raise(vid, code)
-    raise LookupError.new(ERRORS[code]) if code
+    raise LookupError.new(ERRORS[code], load_xml(code.to_s)) if code
     load_xml(vid)
   end
 

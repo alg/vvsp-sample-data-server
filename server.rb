@@ -13,6 +13,7 @@ def search(vid, ln, dob, ssn4, locality)
   content_type 'text/xml'
   Database.lookup(vid, ln, dob, ssn4, locality)
 rescue Database::LookupError => e
+  Thin::HTTP_STATUS_CODES[400] = e.message
   status 400
-  e.message
+  e.xml
 end
