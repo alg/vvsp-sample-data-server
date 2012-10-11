@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "$RACK_ENV" == "development" ] || [ "$RACK_ENV" == "" ]; then
+  RAILS_ENV=development
+  PORT=3000
+fi
+
+bundle exec thin start -R config.ru -e $RAILS_ENV -p $PORT
