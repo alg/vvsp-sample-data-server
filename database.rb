@@ -5,7 +5,7 @@ class Database
     :inactive     => 'Your voter registration is not active.  Please contact the State Board of Elections for more information.'
   }
 
-  DATA =
+  DATA = [
     [ "600000000", "norfolk city", "stempinski-04/22/1959-0000-norfolk city",         nil ],
     [ "600000001", "fairfax county", "chriest-04/23/1929-0001-fairfax county",        nil ],
     [ "600000002", "henrico county", "fryrear-06/08/1981-0002-henrico county",        nil ],
@@ -55,7 +55,9 @@ class Database
     [ "600000046", "fairfax county", "roberts-06/25/1965-0046-fairfax county",        nil ],
     [ "600000047", "fairfax county", "howell-01/27/1984-0047-fairfax county",         nil ],
     [ "600000048", "albemarle county", "singh-05/03/1955-0048-albemarle county",      nil ],
-    [ "600000049", "hampton city", "ohnishi-01/05/1984-0049-hampton city",            nil ]
+    [ "600000049", "hampton city", "ohnishi-01/05/1984-0049-hampton city",            nil ],
+    [ "611001561", "pittsylvania county", "xxxx-01/01/1984-0000-pittsylvania county", nil ],
+    [ "919176144", "newport news city", "xxx-01/01/1984-000-newport news city",       nil ] ]
 
   class LookupError < StandardError
     attr_reader :xml
