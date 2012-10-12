@@ -57,7 +57,8 @@ class Database
     [ "600000048", "albemarle county", "singh-05/03/1955-0048-albemarle county",      nil ],
     [ "600000049", "hampton city", "ohnishi-01/05/1984-0049-hampton city",            nil ],
     [ "611001561", "pittsylvania county", "xxxx-01/01/1984-0000-pittsylvania county", nil ],
-    [ "919176144", "newport news city", "xxx-01/01/1984-000-newport news city",       nil ] ]
+    [ "919176144", "newport news city", "xxx-01/01/1984-000-newport news city",       nil ],
+    [ "999999999", "king & queen county", "xxx-01/01/1984-000-king & queen county",   nil ] ]
 
   class LookupError < StandardError
     attr_reader :xml
