@@ -58,6 +58,7 @@ class Database
     [ "600000049", "hampton city", "ohnishi-01/05/1984-0049-hampton city",            nil ],
     [ "611001561", "pittsylvania county", "xxxx-01/01/1984-0000-pittsylvania county", nil ],
     [ "919176144", "newport news city", "xxx-01/01/1984-000-newport news city",       nil ],
+    [ "999999998", "fairfax county", "xxx-01/01/1984-000-fairfax county",             nil ],
     [ "999999999", "king & queen county", "xxx-01/01/1984-000-king & queen county",   nil ] ]
 
   class LookupError < StandardError
