@@ -20,6 +20,7 @@ GEM
     rb-fsevent (0.9.1)
     rb-inotify (0.8.8)
       ffi (>= 0.5.0)
+    redis (3.0.1)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
       rspec-expectations (~> 2.11.0)
@@ -41,5 +42,6 @@ PLATFORMS
 DEPENDENCIES
   guard
   guard-rspec
+  redis
   rspec
   sinatra

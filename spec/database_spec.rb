@@ -1,4 +1,4 @@
-require './database'
+require './src/database'
 
 describe Database do
 
