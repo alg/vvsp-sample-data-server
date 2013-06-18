@@ -74,7 +74,7 @@ class Database
   # looks up XML using whatever data we have.
   # raises an LookupError when confidential or inactive.
   # return HTML for the not found case.
-  def self.lookup(voter_id, last_name, dob, ssn4, locality)
+  def self.lookup(voter_id, last_name, dobMonth, dobDay, dobYear, ssn4, locality)
     voter_id  = voter_id.to_s
     locality  = locality.to_s.downcase
     last_name = last_name.to_s.downcase
@@ -82,7 +82,7 @@ class Database
     if voter_id && !voter_id.empty? && locality && !locality.empty?
       lookup_by_voter_id(voter_id, locality)
     else
-      lookup_by_ssn4(last_name, dob, ssn4, locality)
+      lookup_by_ssn4(last_name, dobMonth, dobDay, dobYear, ssn4, locality)
     end
   end
 
@@ -98,8 +98,8 @@ class Database
   end
 
   # looks up by last name + dob + ssn4 + locality
-  def self.lookup_by_ssn4(last_name, dob, ssn4, locality)
-    key = "#{last_name}-#{dob}-#{ssn4}-#{locality}"
+  def self.lookup_by_ssn4(last_name, dobMonth, dobDay, dobYear, ssn4, locality)
+    key = "#{last_name}-#{dobMonth}/#{dobDay}/#{dobYear}-#{ssn4}-#{locality}"
     DATA.each do |vid, _, k, code|
       return load_or_raise(vid, code) if k == key
     end

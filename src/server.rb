@@ -2,12 +2,12 @@ require 'sinatra'
 require './src/database'
 require './src/eml310_storage'
 
-get '/search/' do
-  search(nil, params[:lastName], params[:dob], params[:ssn4], params[:localityName])
+get '/voterBySSN4/' do
+  search(nil, params[:lastName], params[:dobMonth], params[:dobDay], params[:dobYear], params[:ssn4], params[:localityName])
 end
 
-get '/:locality/:voter_id' do
-  search(params[:voter_id], nil, nil, nil, params[:locality])
+get '/voterByVID/' do
+  search(params[:voterIDnumber], nil, nil, nil, nil, nil, params[:localityName])
 end
 
 post '/submit_eml310' do
@@ -21,9 +21,9 @@ get '/last_eml310' do
 end
 
 
-def search(vid, ln, dob, ssn4, locality)
+def search(vid, ln, dobMonth, dobDay, dobYear, ssn4, locality)
   content_type 'text/xml'
-  Database.lookup(vid, ln, dob, ssn4, locality)
+  Database.lookup(vid, ln, dobMonth, dobDay, dobYear, ssn4, locality)
 rescue Database::LookupError => e
   if defined? Thin
     Thin::HTTP_STATUS_CODES[400] = e.message
