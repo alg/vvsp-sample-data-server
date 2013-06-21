@@ -99,7 +99,7 @@ class Database
 
   # looks up by last name + dob + ssn4 + locality
   def self.lookup_by_ssn4(last_name, dobMonth, dobDay, dobYear, ssn4, locality)
-    key = "#{last_name}-#{dobMonth}/#{dobDay}/#{dobYear}-#{ssn4}-#{locality}"
+    key = "#{last_name}-#{dobMonth.to_s.rjust(2, '0')}/#{dobDay.to_s.rjust(2, '0')}/#{dobYear}-#{ssn4}-#{locality}"
     DATA.each do |vid, _, k, code|
       return load_or_raise(vid, code) if k == key
     end
