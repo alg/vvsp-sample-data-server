@@ -10,9 +10,14 @@ get '/voterByVID/' do
   search(params[:voterIDnumber], nil, nil, nil, nil, nil, params[:localityName])
 end
 
-post '/submit_eml310' do
-  xml = request.env["rack.input"].read
-  Eml310Storage.store(xml) unless !xml || xml.empty?
+post '/voterRegistrationRequest' do
+  store_eml310
+  'queued'
+end
+
+post '/voterRecordUpdateRequest' do
+  store_eml310
+  'queued'
 end
 
 get '/last_eml310' do
@@ -20,6 +25,10 @@ get '/last_eml310' do
   Eml310Storage.restore
 end
 
+def store_eml310
+  xml = request.env["rack.input"].read
+  Eml310Storage.store(xml) unless !xml || xml.empty?
+end
 
 def search(vid, ln, dobMonth, dobDay, dobYear, ssn4, locality)
   content_type 'text/xml'
