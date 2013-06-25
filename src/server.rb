@@ -20,6 +20,42 @@ post '/voterRecordUpdateRequest' do
   'queued'
 end
 
+get '/voterByDMVIDnumber' do
+  if params[:DMVIDnumber].size == 12
+    <<-XML
+    <VoterRegistration>
+      <CheckBox type="Registered">yes</CheckBox>
+      <CheckBox type="DMVMatch">no</CheckBox>
+    </VoterRegistration>
+    XML
+  elsif params[:DMVIDnumber].size == 9
+    <<-XML
+    <VoterRegistration>
+      <CheckBox type="Registered">no</CheckBox>
+      <CheckBox type="DMVMatch">yes</CheckBox>
+      <ElectoralAddress>
+        <FreeTextAddress>
+        <AddressLine type="AddressLine1" seqn="1">2228 MCKANN AVE</AddressLine>
+        <AddressLine type="AddressLine2" seqn="2">APT 12</AddressLine>
+        <AddressLine type="City" seqn="3">NORFOLK</AddressLine>
+        <AddressLine type="State" seqn="4">VA</AddressLine>
+        <AddressLine type="Zip" seqn="5">235092235</AddressLine>
+        <AddressLine type="Country" seqn="6"/>
+        <AddressLine type="Jurisdiction" seqn="7">NORFOLK CITY</AddressLine>
+        </FreeTextAddress>
+      </ElectoralAddress>
+    </VoterRegistration>
+    XML
+  else
+    <<-XML
+    <VoterRegistration>
+      <CheckBox type="Registered">no</CheckBox>
+      <CheckBox type="DMVMatch">no</CheckBox>
+    </VoterRegistration>
+    XML
+  end
+end
+
 get '/last_eml310' do
   content_type 'text/xml'
   Eml310Storage.restore
