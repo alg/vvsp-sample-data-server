@@ -2,11 +2,11 @@ require 'sinatra'
 require './src/database'
 require './src/eml310_storage'
 
-get '/voterBySSN4/' do
+get '/voterBySSN4' do
   search(nil, params[:lastName], params[:dobMonth], params[:dobDay], params[:dobYear], params[:ssn4], params[:localityName])
 end
 
-get '/voterByVID/' do
+get '/voterByVID' do
   search(params[:voterIDnumber], nil, nil, nil, nil, nil, params[:localityName])
 end
 
