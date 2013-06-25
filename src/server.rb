@@ -35,13 +35,13 @@ get '/voterByDMVIDnumber' do
       <CheckBox type="DMVMatch">yes</CheckBox>
       <ElectoralAddress>
         <FreeTextAddress>
-        <AddressLine type="AddressLine1" seqn="1">2228 MCKANN AVE</AddressLine>
-        <AddressLine type="AddressLine2" seqn="2">APT 12</AddressLine>
-        <AddressLine type="City" seqn="3">NORFOLK</AddressLine>
-        <AddressLine type="State" seqn="4">VA</AddressLine>
-        <AddressLine type="Zip" seqn="5">235092235</AddressLine>
-        <AddressLine type="Country" seqn="6"/>
-        <AddressLine type="Jurisdiction" seqn="7">NORFOLK CITY</AddressLine>
+          <AddressLine type="AddressLine1" seqn="1">2228 MCKANN AVE</AddressLine>
+          <AddressLine type="AddressLine2" seqn="2">APT 12</AddressLine>
+          <AddressLine type="City" seqn="3">NORFOLK</AddressLine>
+          <AddressLine type="State" seqn="4">VA</AddressLine>
+          <AddressLine type="Zip" seqn="5">235092235</AddressLine>
+          <AddressLine type="Country" seqn="6"/>
+          <AddressLine type="Jurisdiction" seqn="7">NORFOLK CITY</AddressLine>
         </FreeTextAddress>
       </ElectoralAddress>
     </VoterRegistration>
