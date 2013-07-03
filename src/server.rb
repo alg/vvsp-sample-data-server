@@ -21,14 +21,14 @@ post '/voterRecordUpdateRequest' do
 end
 
 get '/voterByDMVIDnumber' do
-  if params[:DMVIDnumber].size == 12
+  if params[:DmvIDnumber].size == 12
     <<-XML
     <VoterRegistration>
       <CheckBox type="Registered">yes</CheckBox>
       <CheckBox type="DMVMatch">no</CheckBox>
     </VoterRegistration>
     XML
-  elsif params[:DMVIDnumber].size == 9
+  elsif params[:DmvIDnumber].size == 9
     <<-XML
     <VoterRegistration>
       <CheckBox type="Registered">no</CheckBox>
