@@ -1,5 +1,6 @@
 require 'sinatra'
 require './src/database'
+require './src/dmv_database'
 require './src/eml310_storage'
 
 get '/voterBySSN4' do
@@ -21,32 +22,9 @@ post '/voterRecordUpdateRequest' do
 end
 
 get '/voterByDMVIDnumber' do
-  if params[:DmvIDnumber].size == 12
-    <<-XML
-    <VoterRegistration>
-      <CheckBox type="Registered">yes</CheckBox>
-      <CheckBox type="DMVMatch">no</CheckBox>
-    </VoterRegistration>
-    XML
-  elsif params[:DmvIDnumber].size == 9
-    <<-XML
-    <VoterRegistration>
-      <CheckBox type="Registered">no</CheckBox>
-      <CheckBox type="DMVMatch">yes</CheckBox>
-      <ElectoralAddress>
-        <FreeTextAddress>
-          <AddressLine type="AddressLine1" seqn="1">2228 MCKANN AVE</AddressLine>
-          <AddressLine type="AddressLine2" seqn="2">APT 12</AddressLine>
-          <AddressLine type="City" seqn="3">NORFOLK</AddressLine>
-          <AddressLine type="State" seqn="4">VA</AddressLine>
-          <AddressLine type="Zip" seqn="5">235092235</AddressLine>
-          <AddressLine type="Country" seqn="6"/>
-          <AddressLine type="Jurisdiction" seqn="7">NORFOLK CITY</AddressLine>
-        </FreeTextAddress>
-      </ElectoralAddress>
-    </VoterRegistration>
-    XML
-  else
+  begin
+    DmvDatabase.lookup(params[:DmvIDnumber])
+  rescue DmvDatabase::RecordNotFound
     <<-XML
     <VoterRegistration>
       <CheckBox type="Registered">no</CheckBox>
