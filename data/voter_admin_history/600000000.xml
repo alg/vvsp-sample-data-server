@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<voterTransactionLog>
+  <header>
+    <origin>VERIS</origin>
+    <originUniq>00-00-00-00-00-00</originUniq>
+    <date>2012-10-10T10:10:10</date>
+    <locale>Virginia</locale>
+  </header>
+
+  <voterTransactionRecord>
+    <date>2012-10-10T10:10:12</date>
+    <voterid>123456789</voterid>
+    <action>receive</action>
+    <form>
+      <type>AbsenteeRequest</type>
+      <name>Virginia Absentee Ballot Request Form</name>
+      <number>SBE-701 Rev 8.12</number>
+    </form>
+  </voterTransactionRecord>
+
+  <voterTransactionRecord>
+    <date>2012-10-10T10:10:12</date>
+    <voterid>123456789</voterid>
+    <action>approve</action>
+    <form>
+      <type>AbsenteeRequest</type>
+      <name>Virginia Absentee Ballot Request Form</name>
+      <number>SBE-701 Rev 8.12</number>
+    </form>
+    <leo>York County General Registrar Clerk 17</leo>
+  </voterTransactionRecord>
+
+  <voterTransactionRecord>
+    <date>2012-10-10T10:10:12</date>
+    <voterid>123456789</voterid>
+    <action>reject</action>
+    <form>
+      <type>AbsenteeRequest</type>
+      <name>Virginia Absentee Ballot Request Form</name>
+      <number>SBE-701 Rev 8.12</number>
+    </form>
+    <leo> York County General Registrar Clerk 17 </leo>
+    <notes> rejectUnsigned </notes>
+  </voterTransactionRecord>
+
+  <voterTransactionRecord>
+    <date>2012-10-10T10:10:12</date>
+    <voterid>123456789</voterid>
+    <action>receive</action>
+    <form>
+      <type>AbsenteeBallot</type>
+      <name>Virginia Absentee Ballot</name>
+    </form>
+  </voterTransactionRecord>
+
+  <voterTransactionRecord>
+    <date>2012-10-10T10:10:12</date>
+    <voterid>123456789</voterid>
+    <action>approve</action>
+    <form>
+      <type>AbsenteeBallot</type>
+      <name>Virginia Absentee Ballot</name>
+    </form>
+    <leo>York County General Registrar Clerk 17</leo>
+  </voterTransactionRecord>
+
+  <voterTransactionRecord>
+    <date>2012-10-10T10:10:12</date>
+    <voterid>123456789</voterid>
+    <action>reject</action>
+    <form>
+      <type>AbsenteeBallot</type>
+      <name>Virginia Absentee Ballot</name>
+    </form>
+    <leo> York County General Registrar Clerk 17 </leo>
+    <notes> rejectPreviousVoteAbsentee </notes>
+  </voterTransactionRecord>
+
+</voterTransactionLog>

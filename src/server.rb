@@ -3,6 +3,7 @@ require './src/database'
 require './src/dmv_database'
 require './src/eml310_storage'
 require './src/elections'
+require './src/voter_admin_history'
 
 get '/voterBySSN4' do
   search(nil, params[:lastName], params[:dobMonth], params[:dobDay], params[:dobYear], params[:ssn4], params[:localityName])
@@ -38,6 +39,14 @@ end
 get '/electionsByVoter' do
   begin
     Elections.by_voter(params[:voterID])
+  rescue LookupError => e
+    send_error_400(e.message)
+  end
+end
+
+get '/voterAdminHistoryByVID' do
+  begin
+    VoterAdminHistory.by_vid(params)
   rescue LookupError => e
     send_error_400(e.message)
   end
