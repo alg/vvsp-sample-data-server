@@ -2,6 +2,7 @@ require 'sinatra'
 require './src/database'
 require './src/dmv_database'
 require './src/eml310_storage'
+require './src/elections'
 
 get '/voterBySSN4' do
   search(nil, params[:lastName], params[:dobMonth], params[:dobDay], params[:dobYear], params[:ssn4], params[:localityName])
@@ -34,6 +35,14 @@ get '/voterByDMVIDnumber' do
   end
 end
 
+get '/electionsByVoter' do
+  begin
+    Elections.by_voter(params[:voterID])
+  rescue LookupError => e
+    send_error_400(e.message)
+  end
+end
+
 get '/last_eml310' do
   content_type 'text/xml'
   Eml310Storage.restore
@@ -48,12 +57,17 @@ def search(vid, ln, dobMonth, dobDay, dobYear, ssn4, locality)
   content_type 'text/xml'
   Database.lookup(vid, ln, dobMonth, dobDay, dobYear, ssn4, locality)
 rescue Database::LookupError => e
+  send_error_400(e.message)
+  e.xml
+end
+
+def send_error_400(msg)
   if defined? Thin
-    Thin::HTTP_STATUS_CODES[400] = e.message
+    Thin::HTTP_STATUS_CODES[400] = msg
   else
-    Rack::Utils::HTTP_STATUS_CODES[400] = e.message
+    Rack::Utils::HTTP_STATUS_CODES[400] = msg
   end
 
   status 400
-  e.xml
+  msg
 end

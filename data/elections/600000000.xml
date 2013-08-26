@@ -1,0 +1,16 @@
+<vip_object>
+  <schemaVersion>5.4.1</schemaVersion>
+  <source>
+    <name>Virginia</name>
+    <vip_id>51</vip_id>
+    <datetime>2013-07-29T18:10:58.440</datetime>
+    <description>Virginia candidate information</description>
+    <organization_url>http://www.sbe.virginia.gov</organization_url>
+  </source>
+  <election>
+    <election id="6002FDB4-FC9C-4F36-A418-C0BDFFF2E579">
+    <date>2013-11-05T00:00:00</date>
+    <election_type>General</election_type>
+    <name>2013 November General</name>
+  </election>
+</vip_object>
