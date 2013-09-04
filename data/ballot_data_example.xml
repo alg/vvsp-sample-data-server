@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+  <vip_object>
+  <schemaVersion>5.4.1</schemaVersion>
+  <source>
+    <name>Virginia</name>
+    <vip_id>51</vip_id>
+    <datetime>2013-08-23T11:45:55.043</datetime>
+    <description>406023950</description>
+    <organization_url>http://www.sbe.virginia.gov</organization_url>
+  </source>
+  <election id="1548572989">
+    <date>2012-11-06T00:00:00</date>
+    <name>2012 November General </name>
+    <state_id>51</state_id>
+  </election>
+  <locality id="2117281975">
+    <name>FAIRFAX COUNTY</name>
+    <state_id>51</state_id>
+    <type>COUNTY</type>
+  </locality>
+  <precinct id="803710765">
+    <name>609 - MARLAN</name>
+    <number>0609</number>
+    <locality_id>2117281975</locality_id>
+  </precinct>
+  <electoral_district id="681646453">
+    <type>Statewide</type>
+    <contest id="1790326347">
+      <election_id>1548572989</election_id>
+      <electoral_district_id>681646453</electoral_district_id>
+      <office>President and Vice President</office>
+      <sort_order>1</sort_order>
+      <contest_type>Contest</contest_type>
+      <candidate id="1150703098">
+        <name>Barack Obama</name>
+        <last_name>Obama</last_name>
+        <candidate_url>http://www.barackobama.com</candidate_url>
+        <sort_order>1</sort_order>
+        <party id="1959422136">
+          <name>Democrat</name>
+          <sort_order>1</sort_order>
+        </party>
+      </candidate>
+      <candidate id="1577534840">
+        <name>Virgil Goode</name>
+        <last_name>GOODE</last_name>
+        <candidate_url>http://www.goodeforpresident2012.com</candidate_url>
+        <sort_order>1</sort_order>
+        <party id="1934550463">
+          <name>Constitution</name>
+          <sort_order>1</sort_order>
+        </party>
+      </candidate>
+      <candidate id="1747339571">
+        <name>Mitt Romney</name>
+        <last_name>Romney</last_name>
+        <candidate_url>http://www.mittromney.com</candidate_url>
+        <email>info@mittromney.com</email>
+        <sort_order>2</sort_order>
+        <party id="2053173520">
+          <name>Republican</name>
+          <sort_order>2</sort_order>
+        </party>
+      </candidate>
+      <candidate id="652023968">
+        <name>Gary Johnson</name>
+        <last_name>Johnson</last_name>
+        <candidate_url>http://www.garyjohnson2012.com</candidate_url>
+        <sort_order>3</sort_order>
+        <party id="1248330083">
+          <name>Libertarian</name>
+          <sort_order>3</sort_order>
+        </party>
+      </candidate>
+      <candidate id="854533438">
+        <name>Jill Stein</name>
+        <last_name>Stein</last_name>
+        <candidate_url>http://www.jillstein.org</candidate_url>
+        <email>wolf@jillstein.org</email>
+        <sort_order>7</sort_order>
+        <party id="10316731">
+          <name>Green</name>
+          <sort_order>7</sort_order>
+        </party>
+      </candidate>
+    </contest>
+    <contest id="1712627028">
+      <election_id>1548572989</election_id>
+      <electoral_district_id>681646453</electoral_district_id>
+      <office>United States Senate</office>
+      <sort_order>2</sort_order>
+      <contest_type>Contest</contest_type>
+      <candidate id="1761632464">
+        <name>George F. Allen</name>
+        <last_name>ALLEN</last_name>
+        <candidate_url>http://www.georgeallen.com</candidate_url>
+        <email>mike.thomas@georgeallen.com</email>
+        <sort_order>2</sort_order>
+        <party id="2053173520">
+          <name>Republican</name>
+          <sort_order>2</sort_order>
+        </party>
+      </candidate>
+      <candidate id="73664146">
+        <name>Timothy M. Kaine</name>
+        <last_name>KAINE</last_name>
+        <candidate_url>http://www.kaineforva.com</candidate_url>
+        <email>tmk@kaineforva.com</email>
+        <sort_order>1</sort_order>
+        <party id="1959422136">
+          <name>Democrat</name>
+          <sort_order>1</sort_order>
+        </party>
+      </candidate>
+    </contest>
+    <contest id="761239320">
+      <election_id>1548572989</election_id>
+      <electoral_district_id>681646453</electoral_district_id>
+      <office>Proposed Constitutional Amendment Question 1</office>
+      <sort_order>101</sort_order>
+      <contest_type>Referendum</contest_type>
+      <candidate id="761239320">
+        <name>Shall Section 11 of Article I (Bill of Rights) of the Constitution of Virginia be amended (i) to require that eminent domain only be exercised where the property taken or damaged is for public use and, except for utilities or the elimination of a public nuisance, not where the primary use is for private gain, private benefit, private enterprise, increasing jobs, increasing tax revenue, or economic development; (ii) to define what is included in just compensation for such taking or damaging of property; and (iii) to prohibit the taking or damaging of more private property than is necessary for the public use?</name>
+        <last_name>zz</last_name>
+        <party id="2147483647" />
+      </candidate>
+    </contest>
+    <contest id="2147231421">
+      <election_id>1548572989</election_id>
+      <electoral_district_id>681646453</electoral_district_id>
+      <office>Proposed Constitutional Amendment Question 2</office>
+      <sort_order>101</sort_order>
+      <contest_type>Referendum</contest_type>
+      <candidate id="2147231421">
+        <name>Shall Section 6 of Article IV (Legislature) of the Constitution of Virginia concerning legislative sessions be amended to allow the General Assembly to delay by no more than one week the fixed starting date for the reconvened or "veto" session when the General Assembly meets after a session to consider the bills returned to it by the Governor with vetoes or amendments?</name>
+        <last_name>zz</last_name>
+        <party id="2147483647" />
+      </candidate>
+    </contest>
+  </electoral_district>
+  <electoral_district id="1722507164">
+    <name>08</name>
+    <type>Congressional</type>
+    <description>8th District</description>
+    <contest id="1172098030">
+      <election_id>1548572989</election_id>
+      <electoral_district_id>1722507164</electoral_district_id>
+      <office>Member House of Representatives</office>
+      <sort_order>3</sort_order>
+      <contest_type>Contest</contest_type>
+      <candidate id="1383954393">
+        <name>J. Patrick Murray</name>
+        <last_name>MURRAY</last_name>
+        <candidate_url>http://www.patrickmurrayforcongress.com</candidate_url>
+        <email>patrick@murrayforcongress.com</email>
+        <sort_order>2</sort_order>
+        <party id="2053173520">
+          <name>Republican</name>
+          <sort_order>2</sort_order>
+        </party>
+      </candidate>
+      <candidate id="1808053138">
+        <name>James P. "Jim" Moran, Jr.</name>
+        <last_name>MORAN</last_name>
+        <candidate_url>http://www.jimmoran.org</candidate_url>
+        <email>mmoran@moranforcongress.org</email>
+        <sort_order>1</sort_order>
+        <party id="1959422136">
+          <name>Democrat</name>
+          <sort_order>1</sort_order>
+        </party>
+      </candidate>
+      <candidate id="1857822811">
+        <name>Janet Murphy</name>
+        <last_name>murphy</last_name>
+        <candidate_url>http://http:www.votejoinrun.us</candidate_url>
+        <email>jastarlings@gmail.com</email>
+        <sort_order>6</sort_order>
+        <party id="992598447">
+          <name>Independent Green</name>
+          <sort_order>6</sort_order>
+        </party>
+      </candidate>
+      <candidate id="1881490627">
+        <name>Jason J. Howell</name>
+        <last_name>HOWELL</last_name>
+        <candidate_url>http://www.votejasonhowell.com</candidate_url>
+        <email>jason@votejasonhowell.com</email>
+        <sort_order>4</sort_order>
+        <party id="1263397831">
+          <name>Independent</name>
+          <sort_order>4</sort_order>
+        </party>
+      </candidate>
+    </contest>
+  </electoral_district>
+  <electoral_district id="2117281975">
+    <name>FAIRFAX COUNTY</name>
+    <type>Locality</type>
+    <contest id="102371475">
+      <election_id>1548572989</election_id>
+      <electoral_district_id>2117281975</electoral_district_id>
+      <office>Public Library Bonds</office>
+      <sort_order>105</sort_order>
+      <contest_type>Referendum</contest_type>
+      <candidate id="102371475">
+        <name>Shall the Board of Supervisors of Fairfax County contract a debt, borrow money and issue bonds of Fairfax County, Virginia, in addition to the public library facilities bonds previously authorized, in the maximum aggregate principal amount of $25,000,000 for the purpose of providing funds, with any other available funds, to finance the cost of additional public library facilities, the reconstruction, enlargement and equipment of existing library facilities and the acquisition of necessary land?</name>
+        <last_name>zz</last_name>
+        <party id="2147483647" />
+      </candidate>
+    </contest>
+    <contest id="806433486">
+      <election_id>1548572989</election_id>
+      <electoral_district_id>2117281975</electoral_district_id>
+      <office>Parks and Park Facilities Bonds</office>
+      <sort_order>105</sort_order>
+      <contest_type>Referendum</contest_type>
+      <candidate id="806433486">
+        <name>Shall the Board of Supervisors of Fairfax County contract a debt, borrow money and issue bonds of Fairfax County, Virginia, in addition to the parks and park facilities bonds previously authorized, in the maximum aggregate principal amount of $75,000,000 for the purpose of providing funds with any other available funds to finance the cost of providing parks and park facilities including the acquisition, construction, development and equipment of additional parks and park facilities, and the purchase of permanent easements for the preservation of open-space land and the development and improvement of existing parks and park facilities by the Fairfax County Park Authority, and including an amount not to exceed $12,000,000 allocable to the County as its share of the cost of the parks and park facilities to be acquired, constructed, developed and equipped by the Northern Virginia Regional Park Authority?</name>
+        <last_name>zz</last_name>
+        <party id="2147483647" />
+      </candidate>
+    </contest>
+    <contest id="907348164">
+      <election_id>1548572989</election_id>
+      <electoral_district_id>2117281975</electoral_district_id>
+      <office>Public Safety Bonds</office>
+      <sort_order>105</sort_order>
+      <contest_type>Referendum</contest_type>
+      <candidate id="907348164">
+        <name>Shall the Board of Supervisors of Fairfax County contract a debt, borrow money and issue bonds of Fairfax County, Virginia, in addition to the public safety facilities bonds previously authorized, in the maximum aggregate principal amount of $55,000,000, for the purpose of providing funds, with any other available funds, to finance the cost of providing public safety facilities, including the construction, reconstruction, enlargement, renovation and equipment of civil and criminal justice facilities, police training facilities and stations, fire and rescue training facilities and stations, including fire and rescue stations owned by volunteer organizations, and the acquisition of necessary land?</name>
+        <last_name>zz</last_name>
+        <party id="2147483647" />
+      </candidate>
+    </contest>
+    <contest id="1648624278">
+      <election_id>1548572989</election_id>
+      <electoral_district_id>2117281975</electoral_district_id>
+      <office>Storm Drainage Improvements Bonds</office>
+      <sort_order>105</sort_order>
+      <contest_type>Referendum</contest_type>
+      <candidate id="1648624278">
+        <name>Shall the Board of Supervisors of Fairfax County contract a debt, borrow money and issue bonds of Fairfax County, Virginia in the maximum aggregate principal amount of $30,000,000, for the purpose of providing funds, with any other available funds, to finance the cost of providing storm drainage improvements to prevent flooding and soil erosion, including the acquisition of necessary land?</name>
+        <last_name>zz</last_name>
+        <party id="2147483647" />
+      </candidate>
+    </contest>
+  </electoral_district>
+</vip_object>

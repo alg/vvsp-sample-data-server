@@ -1,7 +1,7 @@
 require "./src/lookup_error"
 
 class VoterAdminHistory
-  
+
   VALID         = "600000000"
   NOT_AVAILABLE = "600000001"
   NOT_ACTIVE    = "600000002"
