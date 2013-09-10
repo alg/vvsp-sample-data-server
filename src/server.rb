@@ -37,15 +37,15 @@ get '/voterByDMVIDnumber' do
   end
 end
 
-get '/electionsByVoter' do
+get '/GetVipElectionByVoterId' do
   begin
-    Elections.by_voter(params[:voterID])
+    Elections.by_voter(params[:voterIDnumber])
   rescue LookupError => e
     send_error_400(e.message)
   end
 end
 
-get '/voterAdminHistoryByVID' do
+get '/GetVoterTransactionLogByVoterId' do
   begin
     VoterAdminHistory.by_vid(params)
   rescue LookupError => e
@@ -53,9 +53,9 @@ get '/voterAdminHistoryByVID' do
   end
 end
 
-get '/ballotInfoByVoter' do
+get '/GetVipBallotsByVoterId' do
   begin
-    BallotInfo.by_voter(params[:voterID], params[:electionUID])
+    BallotInfo.by_voter(params[:VoterIDnumber], params[:electionId])
   rescue LookupError => e
     send_error_400(e.message)
   end

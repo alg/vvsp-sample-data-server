@@ -16,13 +16,13 @@ describe Elections do
     it 'should return invalid error' do
       expect {
         Elections.by_voter(Elections::INVALID)
-      }.to raise_error(LookupError, "Invalid fields: voterID")
+      }.to raise_error(LookupError, "Invalid fields: voterIDnumber")
     end
 
     it 'should return absent error' do
       expect {
         Elections.by_voter(nil)
-      }.to raise_error(LookupError, "Required fields absent: voterID")
+      }.to raise_error(LookupError, "Required fields absent: voterIDnumber")
     end
   end
 

@@ -6,13 +6,13 @@ describe BallotInfo do
     it 'should report missing fields' do
       expect {
         BallotInfo.by_voter(nil, nil)
-      }.to raise_error(LookupError, 'Required fields absent: voterID, electionUID')
+      }.to raise_error(LookupError, 'Required fields absent: VoterIDnumber, electionId')
     end
 
     it 'should report invalid fields' do
       expect {
         BallotInfo.by_voter('a', 'b')
-      }.to raise_error(LookupError, 'Invalid fields: voterID, electionUID')
+      }.to raise_error(LookupError, 'Invalid fields: VoterIDnumber, electionId')
     end
   end
 
