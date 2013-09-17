@@ -3,7 +3,7 @@ require './src/lookup_error'
 class Elections
 
   VALID_ID = "600000000"
-  NO_MATCH = "000000000"
+  NO_MATCH = "600000038"
   INVALID  = "invalid"
 
   def self.by_voter(voter_id)
@@ -14,7 +14,7 @@ class Elections
     elsif voter_id !~ /^\d{9}$/
       raise LookupError.new("Invalid fields: voterIDnumber")
     else
-      raise LookupError.new("No match")
+      raise LookupError.new(File.open("/data/elections/not_found.html"))
     end
   end
 
