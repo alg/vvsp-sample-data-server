@@ -14,7 +14,7 @@ class Elections
     elsif voter_id !~ /^\d{9}$/
       raise LookupError.new("Invalid fields: voterIDnumber")
     else
-      raise LookupError.new(File.open("/data/elections/not_found.html"))
+      raise LookupError.new(File.open("./data/elections/not_found.html").read)
     end
   end
 
