@@ -54,6 +54,7 @@ get '/GetVoterTransactionLogByVoterId' do
 end
 
 get '/GetVipBallotsByVoterId' do
+  raise "Server error" if rand(3) == 0
   begin
     BallotInfo.by_voter(params[:VoterIDnumber], params[:electionId])
   rescue LookupError => e
