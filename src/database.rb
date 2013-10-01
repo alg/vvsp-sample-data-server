@@ -1,8 +1,9 @@
 class Database
 
   ERRORS = {
-    :confidential => 'Your voter information cannot be displayed.  Please contact the State Board of Elections for more information.',
-    :inactive     => 'Your voter registration is not active.  Please contact the State Board of Elections for more information.'
+    :confidential   => 'Your voter information cannot be displayed.  Please contact the State Board of Elections for more information.',
+    :confidential2  => 'Not available',
+    :inactive       => 'Your voter registration is not active.  Please contact the State Board of Elections for more information.'
   }
 
   DATA = [
@@ -45,7 +46,7 @@ class Database
     [ "600000036", "chesapeake city", "chappell-12/06/1925-0036-chesapeake city",     nil ],
     [ "600000037", "fairfax county", "gordon-06/17/1925-0037-fairfax county",         nil ],
     [ "600000038", "arlington county", "bennett-01/06/1932-0038-arlington county",    nil ],
-    [ "600000039", "portsmouth city", "howe-05/25/1974-0039-portsmouth city",         :confidential ],
+    [ "600000039", "portsmouth city", "howe-05/25/1974-0039-portsmouth city",         :confidential2 ],
     [ "600000040", "fairfax county", "byrne-10/11/1931-0040-fairfax county",          nil ],
     [ "600000041", "arlington county", "fitzgerald-08/07/1962-0041-arlington county", nil ],
     [ "600000042", "fairfax county", "beckner-07/21/1976-0042-fairfax county",        nil ],
