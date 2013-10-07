@@ -3,18 +3,15 @@ require './src/lookup_error'
 class Elections
 
   VALID_ID = "600000000"
-  NO_MATCH = "600000038"
   INVALID  = "invalid"
 
   def self.by_voter(voter_id)
-    if voter_id == VALID_ID
-      File.open("./data/elections/600000000.xml", "r").read
-    elsif voter_id.nil?
+    if voter_id.nil?
       raise LookupError.new("Required fields absent: voterIDnumber")
     elsif voter_id !~ /^\d{9}$/
       raise LookupError.new("Invalid fields: voterIDnumber")
     else
-      raise LookupError.new(File.open("./data/elections/not_found.html").read)
+      File.open("./data/elections/600000000.xml", "r").read
     end
   end
 

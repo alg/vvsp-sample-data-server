@@ -7,12 +7,6 @@ describe Elections do
       expect(Elections.by_voter(Elections::VALID_ID)).to eq File.open("./data/elections/600000000.xml", "r").read
     end
 
-    it 'should return not found error' do
-      expect {
-        Elections.by_voter(Elections::NO_MATCH)
-      }.to raise_error(LookupError, "No match")
-    end
-
     it 'should return invalid error' do
       expect {
         Elections.by_voter(Elections::INVALID)
