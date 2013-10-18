@@ -2,6 +2,11 @@ require "./src/voter_admin_history"
 
 describe VoterAdminHistory do
 
+  it 'should return UOCAVA XML' do
+    expect(VoterAdminHistory.by_vid(voterIDnumber: VoterAdminHistory::UOCAVA.first)).to \
+      eq File.open("./data/voter_admin_history/uocava.xml").read
+  end
+
   it 'should return XML' do
     expect(VoterAdminHistory.by_vid(voterIDnumber: VoterAdminHistory::VALID)).to \
       eq File.open("./data/voter_admin_history/600000000.xml").read
