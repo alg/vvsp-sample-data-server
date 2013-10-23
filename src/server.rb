@@ -26,6 +26,7 @@ end
 
 get '/voterByDMVIDnumber' do
   begin
+    sleep 50
     DmvDatabase.lookup(params[:DmvIDnumber])
   rescue DmvDatabase::RecordNotFound
     <<-XML
